@@ -2,6 +2,7 @@ import hero from './assets/images/hero.png';
 import BRUSH1 from './assets/images/BRUSH1.png';
 import BRUSH2 from './assets/images/BRUSH2.png';
 import BRUSH3 from './assets/images/BRUSH3.png';
+import ArticleList from './containers/ArticleList';
 import './App.css';
 
 function App() {
@@ -10,8 +11,6 @@ function App() {
   }
   return (
     <>
-
-
       {/* <!-- ===== HEADER ====== --> */}
       <div className="hero" style={{
         backgroundImage: `url("${hero}")`
@@ -66,53 +65,22 @@ function App() {
       <div className='linear-gradient-background'></div>
       {/* <!-- services section --> */}
       <div id="services" className="section_2 services container">
-        <div className="services-title-container">
-          <h2 className="services-title">Nuestros artículos</h2>
-          <div className="services-image-container">
+        <div className="articles-title-container">
+          <h2 className="articles-title">Nuestros artículos</h2>
+          <div className="articles-image-container">
             <img src={BRUSH2} className="" alt="BRUSH2" />
           </div>
         </div>
-        <div className='services-sections'>
+        <div className='articles-sections'>
           <section>
             <ul className="nav">
               <li><a className="profile" href="#">Todos</a></li>
-              <li className="selected"><a className="messages" href="#">Productos <em><i class="fas fa-arrow-right"></i></em></a></li>
+              <li className="selected"><a className="messages" href="#">Productos <em><i className="fas fa-arrow-right"></i></em></a></li>
               <li><a className="settings" href="#">Recetas</a></li>
               <li><a className="logout" href="#">Consejos</a></li>
             </ul>
-          </section>
-          <section className="services-container">
-          <div className="card">
-            <div className="card-img"><img src="https://cdn.pixabay.com/photo/2022/05/20/19/05/common-house-martin-7210082_960_720.jpg" alt="" /></div>
-            <div className="card-title">Lorem ipsum dolor sit amet.</div>
-            <div className="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis auctor sagittis. </div>
-          </div>
-          <div className="card">
-            <div className="card-img"><img src="https://cdn.pixabay.com/photo/2022/05/20/19/05/common-house-martin-7210082_960_720.jpg" alt="" /></div>
-            <div className="card-title">Lorem ipsum dolor sit amet.</div>
-            <div className="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis auctor sagittis. </div>
-          </div>
-          <div className="card">
-            <div className="card-img"><img src="https://cdn.pixabay.com/photo/2022/05/20/19/05/common-house-martin-7210082_960_720.jpg" alt="" /></div>
-            <div className="card-title">Lorem ipsum dolor sit amet.</div>
-            <div className="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis auctor sagittis. </div>
-          </div>
-          <div className="card">
-            <div className="card-img"><img src="https://cdn.pixabay.com/photo/2022/05/20/19/05/common-house-martin-7210082_960_720.jpg" alt="" /></div>
-            <div className="card-title">Lorem ipsum dolor sit amet.</div>
-            <div className="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis auctor sagittis. </div>
-          </div>
-          <div className="card">
-            <div className="card-img"><img src="https://cdn.pixabay.com/photo/2022/05/20/19/05/common-house-martin-7210082_960_720.jpg" alt="" /></div>
-            <div className="card-title">Lorem ipsum dolor sit amet.</div>
-            <div className="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis auctor sagittis. </div>
-          </div>
-          <div className="card">
-            <div className="card-img"><img src="https://cdn.pixabay.com/photo/2022/05/20/19/05/common-house-martin-7210082_960_720.jpg" alt="" /></div>
-            <div className="card-title">Lorem ipsum dolor sit amet.</div>
-            <div className="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis auctor sagittis. </div>
-          </div>
-          </section>
+          </section>          
+			    <ArticleList />
         </div>
       </div>
       <div id="" className="section_3 contact container">

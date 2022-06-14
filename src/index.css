@@ -44,7 +44,6 @@ img {
 }
 body {
   font-family: "Montserrat", "Avenir", sans-serif;
-  /* background-color: var(--white-clr); */
   display: flex;
   flex-direction: column;
 }
@@ -134,7 +133,6 @@ header {
   font-weight: 700;
   font-size: 120px;
   line-height: 100px;
-  /* or 83% */
 
   display: flex;
   align-items: center;
@@ -197,7 +195,6 @@ header {
 }
 .about .about-title {
   text-transform: capitalize;
-  /* color: var(--white-clr); */
   font-size: 2rem;
   margin-bottom: 2rem;
   position: relative;
@@ -223,16 +220,13 @@ header {
 }
 
 /* section 3 */
-/* .services {
-  margin: 3rem auto;
-} */
-.services-title-container {
+.articles-title-container {
   height: 100px;
   display: flex;
   justify-content: center;
   position: relative;
 }
-.services-title-container .services-title {
+.articles-title-container .articles-title {
   /* H2 */
 
   font-family: "Caveat";
@@ -240,18 +234,15 @@ header {
   font-weight: 700;
   font-size: 80px;
   line-height: 38px;
-  /* or 48% */
 
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
 
-  /* #24272A */
-
   color: var(--dark-clr);
 }
-.services-image-container {
+.articles-image-container {
   position: absolute;
   width: 500px;
   z-index: -1; 
@@ -260,7 +251,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   
 }
-.services-image-container  img{  
+.articles-image-container  img{  
   opacity: 0.5;
 }
 /*card*/
@@ -413,9 +404,6 @@ ul.nav {
   padding-bottom: 1rem;
 }
 /* section 4 */
-/* .services {
-  margin: 3rem auto;
-} */
 .contact-title-container {
   height: 100px;
   display: flex;
@@ -462,10 +450,6 @@ ul.nav {
   margin-bottom: 40px;
 }
 
-/*inicio form »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
-/* form input:invalid{
-  border: 1px solid #f78787
-} */
 form fieldset {
   width: 100%;
   font-family: 'Staatliches',sans-serif;
@@ -623,7 +607,7 @@ button:hover{
     font-size: 1.3rem;
   }
   /* services */
-  .services-container {
+  .articles-container {
     column-gap: 1rem;
   }
   
@@ -648,22 +632,19 @@ button:hover{
   .section_2 {
     position: relative;
   }
-  .section_2 .services-sections {
+  .section_2 .articles-sections {
     display: flex;
   }
-  .section_2 .services-sections section:nth-child(1) {
+  .section_2 .articles-sections section:nth-child(1) {
     width: 40%;
   }
-  .section_2 .services-sections section {
+  .section_2 .articles-sections section {
     width: 100%;
     padding: 2rem;
     position: relative;
   }
 
   /* section 3 */
-  /* .services {
-    margin: 3rem 0;
-  } */
   .service-title {
     margin-top: 2rem;
     font-size: 1.1rem;
@@ -675,7 +656,7 @@ button:hover{
   .service-description {
     font-size: 0.9rem;
   }
-  .services-container {
+  .articles-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; 
