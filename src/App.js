@@ -4,10 +4,14 @@ import BRUSH2 from './assets/images/BRUSH2.png';
 import BRUSH3 from './assets/images/BRUSH3.png';
 import ArticleList from './containers/ArticleList';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-  const NavBar = () => {
-    console.log('NavBar')
+  const [query,setQuery] = useState('articles')
+  const onChangeCategory = (event,category) => {
+    event.preventDefault() 
+    setQuery(category)
+    console.log('category:',category)
   }
   return (
     <>
@@ -74,13 +78,41 @@ function App() {
         <div className='articles-sections'>
           <section>
             <ul className="nav">
-              <li><a className="profile" href="#">Todos</a></li>
-              <li className="selected"><a className="messages" href="#">Productos <em><i className="fas fa-arrow-right"></i></em></a></li>
-              <li><a className="settings" href="#">Recetas</a></li>
-              <li><a className="logout" href="#">Consejos</a></li>
+              <li className={query === 'articles' ? "selected" : null}>
+                <a 
+                  href="#" 
+                  onClick={ (event) => onChangeCategory(event, 'articles') }>
+                  Todos
+                  {query === 'articles' ? <em><i className="fas fa-arrow-right"></i></em> : null}
+                </a>
+              </li>
+              <li className={query === 'articles?filter=Productos' ? "selected" : null}>
+                <a 
+                  href="#"
+                  onClick={ (event) => onChangeCategory(event, 'articles?filter=Productos') }>
+                  Productos 
+                  {query === 'articles?filter=Productos' ? <em><i className="fas fa-arrow-right"></i></em> : null}
+                </a>
+              </li>
+              <li className={query === 'articles?filter=Recetas' ? "selected" : null}>
+                <a 
+                  href="#" 
+                  onClick={ (event) => onChangeCategory(event, 'articles?filter=Recetas') }>
+                    Recetas
+                    {query === 'articles?filter=Recetas' ? <em><i className="fas fa-arrow-right"></i></em> : null}
+                </a>
+              </li>
+              <li className={query === 'articles?filter=Consejos' ? "selected" : null}>
+                <a 
+                  href="#" 
+                  onClick={ (event) => onChangeCategory(event, 'articles?filter=Consejos') }>
+                    Consejos
+                    {query === 'articles?filter=Consejos' ? <em><i className="fas fa-arrow-right"></i></em> : null}                    
+                </a>
+              </li>
             </ul>
           </section>          
-			    <ArticleList />
+			    <ArticleList query={query} />
         </div>
       </div>
       <div id="" className="section_3 contact container">

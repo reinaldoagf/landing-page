@@ -8,7 +8,7 @@ const useGetArticles = (API) =>{
 			setArticles(response.data);
 		}
 		getData();
-	},[])
+	},[API])
     return articles;
 }
 export default useGetArticles;

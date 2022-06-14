@@ -257,7 +257,7 @@ header {
 /*card*/
 .card {
   width: 30%;
-  height: auto;
+  height: max-content;
   background-color: #ebebeb;
   border-radius: 10px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -276,20 +276,19 @@ header {
   height: 100%;
   border-radius: 15px 15px 0px 0px;
 }
-.card .card-title {
+.card .card-body {
+  padding: 20px;
+}
+.card .card-body .card-title {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: 60px;
   margin: auto;
-  margin-top: 10px;
   font-weight: 900;
   font-size: 20px;
   color: #24272A;
-  font-family:  'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
-.card .card-content {
+.card .card-body .card-content {
   font-family:  'Raleway', sans-serif;
   display: flex;
   align-items: center;
