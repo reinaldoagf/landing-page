@@ -7,8 +7,6 @@ const API = 'https://5eed24da4cbc340016330f0d.mockapi.io/api';
 
 const ArticleList = ({query}) => {
     const {loading, articles} = useGetArticles(`${API}/${query}`)
-    console.log(articles)
-    console.log(loading)
     return (
         <section className="articles-container">
             {loading && <Spinner />}

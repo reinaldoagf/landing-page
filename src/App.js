@@ -2,6 +2,7 @@ import hero from './assets/images/hero.png';
 import BRUSH1 from './assets/images/BRUSH1.png';
 import BRUSH2 from './assets/images/BRUSH2.png';
 import BRUSH3 from './assets/images/BRUSH3.png';
+import Header from './components/Header';
 import ArticleList from './containers/ArticleList';
 import './App.css';
 import { useState } from 'react';
@@ -11,7 +12,6 @@ function App() {
   const onChangeCategory = (event,category) => {
     event.preventDefault() 
     setQuery(category)
-    console.log('category:',category)
   }
   return (
     <>
@@ -19,40 +19,7 @@ function App() {
       <div className="hero" style={{
         backgroundImage: `url("${hero}")`
       }}>
-        <header>
-          {/* <!-- logo --> */}
-          <a className="logo" href="#hero">Logo</a>
-          {/* <!-- navbar --> */}
-          <nav className="nav-bar">
-            <ul className="nav-items">
-              <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <span className="icon-container blue-color" >
-                    <i className="fa fa-brands fa-facebook"></i>
-                  </span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <span className="icon-container red-color">
-                    <i className="fa fa-brands fa-instagram"></i>
-                  </span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <span className="icon-container mustard-color">
-                    <i className="fa fa-brands fa-youtube"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div className="menu-icons">
-            <i className="bx bx-menu"></i>
-            <i className="bx bx-x"></i>
-          </div>
-        </header>
+        <Header />
         {/* <!-- ===== BODY ====== --> */}
         {/* <!-- home section --> */}
         <section id="hero" className="section_1 home container">
